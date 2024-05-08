@@ -1,0 +1,32 @@
+<div class="container mt-4">
+    <h2 class="mb-4">Payment List</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Code</th>
+            <th>Date</th>
+            <th>Type</th>
+            <th>Status</th>
+            <th>File</th>
+            <th>Student ID</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let payment of payments">
+            <td>{{ payment.id }}</td>
+            <td>{{ payment.code }}</td>
+            <td>{{ payment.date }}</td>
+            <td>{{ payment.type }}</td>
+            <td>{{ payment.status }}</td>
+            <td>{{ payment.file }}</td>
+            <td>{{ payment.student?.firstName }}</td>
+            <td>
+                <button class="btn btn-primary btn-sm">Edit</button>
+                <button class="btn btn-danger btn-sm" (click)="deletePayment(payment.id)">Delete</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

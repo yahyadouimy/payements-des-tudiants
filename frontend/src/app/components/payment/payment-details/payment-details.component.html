@@ -1,0 +1,19 @@
+<div class="container">
+  <h2>Payment Details</h2>
+  <div class="row">
+    <div class="col-md-6">
+      <p><strong>Code:</strong> {{ payment.code }}</p>
+      <p><strong>Date:</strong> {{ payment.date | date }}</p>
+      <p><strong>Type:</strong> {{ payment.type }}</p>
+      <p><strong>Status:</strong> {{ payment.status }}</p>
+      <p><strong>File:</strong> {{ payment.file }}</p>
+    </div>
+    <div class="col-md-6">
+      <p><strong>Student ID:</strong> {{ payment.student.id }}</p>
+      <p><strong>First Name:</strong> {{ payment.student.firstName }}</p>
+      <p><strong>Last Name:</strong> {{ payment.student.lastName }}</p>
+      <p><strong>Email:</strong> {{ payment.student.email }}</p>
+      <p><strong>Major:</strong> {{ payment.student.major }}</p>
+    </div>
+  </div>
+</div>

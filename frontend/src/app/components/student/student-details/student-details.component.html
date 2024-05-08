@@ -1,0 +1,47 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h2>Student Details</h2>
+      <div class="card">
+        <div class="card-body">
+          <div class="form-group">
+            <label>ID:</label>
+            <p class="form-control-static">{{ student.id }}</p>
+          </div>
+          <div class="form-group">
+            <label>First Name:</label>
+            <p class="form-control-static">{{ student.firstName }}</p>
+          </div>
+          <div class="form-group">
+            <label>Last Name:</label>
+            <p class="form-control-static">{{ student.lastName }}</p>
+          </div>
+          <div class="form-group">
+            <label>Email:</label>
+            <p class="form-control-static">{{ student.email }}</p>
+          </div>
+          <div class="form-group">
+            <label>Major:</label>
+            <p class="form-control-static">{{ student.major }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col">
+      <h3>Payments</h3>
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let payment of student.payments">
+          <div><strong>ID:</strong> {{ payment.id }}</div>
+          <div><strong>Date:</strong> {{ payment.date }}</div>
+          <div><strong>Type:</strong> {{ payment.type }}</div>
+          <div><strong>Status:</strong> {{ payment.status }}</div>
+
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
